@@ -47,11 +47,11 @@ const modals = () => {
 
   modalsShow(".popup_engineer_btn", ".popup_engineer");
   modalsShow(".phone_link", ".popup");
-  modalsShowByTime(".popup", 60000);
+  //modalsShowByTime(".popup", 60000);
   modalsClose(
     document.querySelector(".popup_engineer"),
     document.querySelector(".popup")
   );
 };
 
-modals();
+export default modals;
