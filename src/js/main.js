@@ -2,9 +2,16 @@ import "./slider";
 import modals from "./modules/modals";
 import tabs from "./modules/tabs";
 import forms from "./modules/forms";
+import changeModalState from "./modules/changeModalState";
+import timer from "./modules/timer";
 
 window.addEventListener("DOMContentLoaded", () => {
   "use strict";
+
+  let modalState = {};
+  let deadline = "2020-08-21";
+
+  changeModalState(modalState);
   modals();
   tabs(".glazing_slider", ".glazing_block", ".glazing_content", "active");
   tabs(
@@ -21,5 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
     "inline-block"
   );
 
-  forms();
+  forms(modalState, ".popup_calc_end");
+
+  timer(".container1", deadline);
 });
